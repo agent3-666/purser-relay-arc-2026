@@ -1,0 +1,39 @@
+/* Run with node docs/ui-guards.test.cjs; no network or signing. */
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+require('./vendor/ethers.min.js');const E=globalThis.ethers;
+const code='0x6000', hash=E.keccak256(code), id='0x'+'11'.repeat(32), address='0x'+'22'.repeat(20), owner='0x'+'33'.repeat(20),payee='0x'+'44'.repeat(20), worker='0x'+'55'.repeat(20);
+const abi=JSON.parse(fs.readFileSync(require('node:path').join(__dirname,'../contracts/abi.json'),'utf8')), iface=new E.Interface(abi);
+let reads=0,manifestFetch=0,sends=0,chain=5042n,liveCode=code,who=owner,balance=1000000000000000000n,fee=1000000000n,estimate=50000n,status=2,deadline=2000n,now=1000,missing=false,badPayee=false,badAmount=false,claimAfterApprove=false;
+const elements=new Map();function el(id){if(!elements.has(id))elements.set(id,{id,value:'',textContent:'',disabled:false,className:'',children:[],dataset:{},addEventListener(){},replaceChildren(){this.children=[]},append(...c){this.children.push(...c)},showModal(){this.open=true},close(){this.open=false}});return elements.get(id)}
+const buttons=['approve','claimPayment','expire','claimRefund'].map(action=>({...el('button-'+action),dataset:{action},disabled:true}));
+const order=()=>({owner,payee,workerA:worker,workerB:E.ZeroAddress,requestHash:id,acceptanceRuleHash:id,deliverableHash:id,principal:10000000000000000n,deadline,authorityEpoch:2n,submittedEpoch:2n,submittedAt:900n,submitter:worker,status:BigInt(status),credit:status===3||status===5?10000000000000000n:0n});
+class RPC {async send(){reads++;return '0x'+chain.toString(16)}async getBlock(){return {number:42,hash:id,timestamp:now}}async getCode(){return liveCode}async getTransactionReceipt(){return null}}
+class Wallet extends RPC{async getBalance(){return balance}async getFeeData(){return {maxFeePerGas:fee,maxPriorityFeePerGas:0n}}async call(){return '0x'}async estimateGas(){return estimate}async getSigner(){return {sendTransaction:async tx=>{sends++;const call=iface.parseTransaction({data:tx.data});const target={approve:3,claimPayment:4,expire:5,claimRefund:6}[call.name];const ev={approve:['OrderApproved',[id,payee,id,id,order().principal]],claimPayment:['PaymentClaimed',[id,payee,order().principal]],expire:['OrderExpired',[id,owner,order().principal]],claimRefund:['RefundClaimed',[id,owner,order().principal]]}[call.name];if(badPayee)ev[1][1]=worker;if(badAmount)ev[1][ev[1].length-1]+=1n;const encoded=iface.encodeEventLog(iface.getEvent(ev[0]),ev[1]);return {hash:id,nonce:1,wait:async()=>{if(missing)return null;status=target;if(claimAfterApprove&&call.name==='approve')status=4;return {status:1,from:who,to:address,blockNumber:42,blockHash:id,hash:id,gasUsed:40000n,gasPrice:20000000000n,logs:[{address,...encoded}]}}}}}}
+}
+class Contract{async getOrder(){return order()}}
+const storage=new Map();const sandbox={localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)},ethers:{...E,JsonRpcProvider:RPC,BrowserProvider:Wallet,Contract},URL,Date,console,setTimeout,document:{body:{dataset:{mode:'recovery'}},getElementById:el,querySelectorAll:()=>buttons,createElement:tag=>({tag,textContent:''})},window:{ethereum:{on(){},request:async({method})=>method==='eth_requestAccounts'?[who]:'0x'+chain.toString(16)}},fetch:async()=>{manifestFetch++;throw Error('Recovery must not fetch manifest')}};
+vm.createContext(sandbox);vm.runInContext(fs.readFileSync(__dirname+'/app.js','utf8'),sandbox);
+el('rpc').value='https://rpc.mainnet.arc.io';el('contract').value=address;el('codehash').value=hash;el('orderId').value=id;
+const click=async action=>{await buttons.find(b=>b.dataset.action===action).onclick()};
+(async()=>{
+ await el('read').onclick();assert.match(el('finance').textContent,/Principal locked/);assert.equal(manifestFetch,0);assert(buttons.every(b=>b.disabled));
+ el('rpc').value='http://127.0.0.1:8545';await el('read').onclick();assert.match(el('deploymentStatus').textContent,/LOCAL SIMULATION/);assert.match(el('message').textContent,/NOT MAINNET/);assert(el('details').children.some(x=>x.textContent==='Local simulation · 5042'));el('rpc').value='https://rpc.mainnet.arc.io';await el('read').onclick();assert.match(el('message').textContent,/Arc mainnet RPC read/);
+ await el('connect').onclick();assert.equal(buttons[0].disabled,false);assert.equal(buttons[1].disabled,true);
+ await click('approve');assert.equal(sends,0);assert.equal(el('confirm').open,true);assert.match(el('review').textContent,/0.00125 USDC/); // 62,500 × 20 Gwei
+ await el('confirmSend').onclick();assert.equal(sends,1);assert.equal(status,3);assert.match(el('trail').textContent,/RECEIPT_AND_EVENT_VERIFIED/);
+ who=payee;await el('connect').onclick();await el('read').onclick();now=3000;await el('read').onclick();assert.equal(buttons[1].disabled,false);assert.equal(buttons[2].disabled,true); // approved survives deadline
+ await click('claimPayment');await el('confirmSend').onclick();assert.equal(status,4);assert.equal(sends,2);assert(buttons.every(b=>b.disabled));
+ chain=1n;await el('read').onclick();assert.match(el('message').textContent,/Wrong RPC chain/);assert(buttons.every(b=>b.disabled));chain=5042n;
+ liveCode='0x6001';await el('read').onclick();assert.match(el('message').textContent,/hash mismatch/);liveCode=code;
+ status=1;deadline=3000n;now=3000;who=owner;await el('connect').onclick();await el('read').onclick();assert.equal(buttons[2].disabled,false);assert.equal(buttons[0].disabled,true);
+ await click('expire');await el('confirmSend').onclick();assert.equal(status,5);assert.equal(buttons[3].disabled,false);
+ balance=0n;await click('claimRefund');assert.match(el('message').textContent,/Insufficient native USDC/);assert.equal(sends,3);balance=1000000000000000000n;
+ await el('read').onclick();await click('claimRefund');fee=100000000000n;await el('confirmSend').onclick();assert.match(el('message').textContent,/fee changed/);assert.equal(sends,3);fee=1000000000n;
+ await el('read').onclick();await click('claimRefund');missing=true;await el('confirmSend').onclick();assert.match(el('message').textContent,/Receipt missing/);assert.equal(sends,4);assert(buttons.every(b=>b.disabled));
+ // Same order after reload stays locked while the receipt is missing.
+ missing=false;await el('read').onclick();assert.equal(buttons[3].disabled,true);assert.equal(sends,4);
+ storage.clear();status=2;deadline=5000n;now=1000;who=owner;await el('connect').onclick();await el('read').onclick();claimAfterApprove=true;await click('approve');await el('confirmSend').onclick();assert.equal(status,4);assert.match(el('message').textContent,/completed/);claimAfterApprove=false;
+ storage.clear();status=2;await el('read').onclick();badPayee=true;await click('approve');await el('confirmSend').onclick();assert.match(el('message').textContent,/event fields mismatch/);badPayee=false;
+ storage.clear();status=2;await el('read').onclick();badAmount=true;await click('approve');await el('confirmSend').onclick();assert.match(el('message').textContent,/event fields mismatch/);badAmount=false;
+ console.log(JSON.stringify({status:'PASS',checks:['recovery no manifest/backend','unconnected no actions','owner/payee role separation','no broadcast before review confirmation','20 gwei fee floor','approve receipt event state','approved survives deadline','terminal prevents repeat','wrong chain rejected','wrong codehash rejected','deadline equality expiry','gas insufficiency rejected','fee changes need new approval','missing receipt UNKNOWN no automatic retry','durable unknown action lock','approve then same-block claim accepted','wrong event payee rejected','wrong event amount rejected','loopback 5042 explicitly local not mainnet','official RPC label remains Arc mainnet'],rpcReads:reads,explicitMockSends:sends},null,2));
+})().catch(e=>{console.error(e);process.exitCode=1});

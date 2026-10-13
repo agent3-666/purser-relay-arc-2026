@@ -1,0 +1,45 @@
+Purser Relay on Arc — independent recovery
+
+This folder is a self-contained static client. Keep recovery.html, styles.css,
+app.js and vendor/ethers.min.js together (and its license). No main application,
+central backend, worker journal, CDN or private key file is required.
+
+Serve this folder with a local static HTTP server or another static host.
+Open recovery.html. Enter the public contract, expected runtime code hash from
+your trusted deployment record, and the order ID. Default RPC is Arc's official
+mainnet endpoint. An optional RPC is a trust assumption, not a light client.
+
+First click Verify & read. The client checks chain 5042, runtime hash and an
+existing order at one snapshot block. No missing state is interpreted as paid.
+Connect the appropriate EIP-1193 wallet on Arc mainnet. No network switch is
+requested automatically. Read-only inspection works without a wallet.
+
+Approved: fixed payee may collect at any time, even after deadline.
+Funded/Submitted at or past deadline: any funded signer may mark it expired.
+Refundable: fixed owner may collect the principal refund.
+A task's owner can approve Submitted only before deadline; that is an explicit
+acceptance decision, not automatic proof of report quality.
+
+Every write simulates, estimates gas, applies a 20 Gwei minimum max fee and
+checks the signer's USDC balance against gasLimit × maxFeePerGas. The review
+dialog states this maximum charge; only its confirmation requests a transaction.
+Principal is already in escrow and is not deducted by worker gas. Each signer
+needs native USDC for its own fees. The native unit is 18 decimals. ERC-20's
+6-decimal view is the same balance and is not a second asset.
+
+A transaction hash alone is not payment proof. Successful verification requires
+receipt status 1, canonical block hash, the expected contract event and resulting
+order state. Receipt missing, wrong chain/code, RPC failure or contradiction
+means UNKNOWN. There is no automatic retry or new intent. Pending request/transaction records
+are saved in this browser’s localStorage. Unknown actions remain locked across
+reloads until read-only reconciliation verifies a receipt. An unreturned wallet
+request without a transaction hash requires independent wallet inspection.
+This local audit store is not needed to prove an existing order or use another
+independent recovery client, but never repeat an uncertain transaction blindly.
+
+USDC restrictions, rejecting receivers, network outages and lost wallet access
+can prevent withdrawal. A failed transfer retains the contract credit. Do not
+use this interface to bypass any restriction.
+
+Use the independent repository CLI when a browser RPC has CORS limitations.
+This kit contains no secrets and cannot recover a lost signing key.

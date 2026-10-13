@@ -1,0 +1,1 @@
+{"authority":"owner","auxiliaryChecks":["valid report schema","matching source URL and source SHA256","required keys present"],"disclosure":"Schema assistance only. Owner must independently approve content before payment.","qualityOracle":false,"schema":"owner-approval-rule/v1"}

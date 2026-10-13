@@ -1,0 +1,18 @@
+{
+  "network": "Arc local Foundry VM",
+  "forgeVersion": "v0.8.0-2d497bee",
+  "command": "arc-forge test --network arc -vv",
+  "sourceSha256": "9df469a9e71b4dd21acbef087954fd875c86c2642990b10c77215a0e6bd34936",
+  "testSha256": "ccb8d5e6c6b2c3154f0da03495417735e4fcfe05785f7fa2ec636dcaf3a59cd5",
+  "testsPassed": 23,
+  "fuzzRuns": 256,
+  "arcMutantsKilled": 6,
+  "standardEvmTestsPassed": 23,
+  "standardMutantsKilled": 6,
+  "initialFailure": "6 payout tests failed with fixture recipient 0xD; recipients moved out of reserved low address range. Contract source unchanged. Initial failure log retained.",
+  "limitations": [
+    "Recipient rejection tested via rejecting contracts; actual Arc USDC blocklist not simulated or verified.",
+    "No Arc mainnet transactions.",
+    "Contract test domain counterexample checks distinct computed order IDs and request hash mismatch; cross-job same-hash handoff authorization is covered by TS, not this test."
+  ]
+}

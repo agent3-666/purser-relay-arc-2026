@@ -1,0 +1,37 @@
+{
+  "status": "PASS_STATIC_AND_MOCK_ONLY",
+  "html": [
+    {
+      "file": "index.html",
+      "uniqueIds": 23,
+      "allLocalDependenciesPresent": true
+    },
+    {
+      "file": "recovery.html",
+      "uniqueIds": 23,
+      "allLocalDependenciesPresent": true
+    }
+  ],
+  "recoveryFiles": [
+    "recovery.html",
+    "app.js",
+    "styles.css",
+    "vendor/ethers.min.js",
+    "vendor/ethers-LICENSE.md",
+    "RECOVERY_KIT.txt"
+  ],
+  "recoveryZipSHA256": "df5f3f9ac4d9e87eab1cb08869fe308f2a7c5f2ca0f260220b81281725c53152",
+  "visualBrowserVerified": false,
+  "liveMainnetActionVerified": false,
+  "deploymentStatus": "NOT_DEPLOYED",
+  "fileSHA256": {
+    "recovery.html": "66642c01d7e0e671f27365e07257c61a73a847697edc4280cebb388e99646a46",
+    "app.js": "5851925eb78e62ee70f23dd25d6ca43cbffaca6c9374ddf856c2e3012ecd0166",
+    "styles.css": "c775cf2a92536bca9a6de2b3fa1b7b1d4f41653e85959bea4f75f0e6f737a2aa",
+    "vendor/ethers.min.js": "532950515fd29ae9f7a21ceb2b68100815024d7944c3d5a92246d5b900bd703b",
+    "vendor/ethers-LICENSE.md": "44eea86637405118248327fbe9d9fa95d04c7a57221c7e8c155f736db9f1b612",
+    "RECOVERY_KIT.txt": "f14325640ebe2556bc0df737ed0d560afd264f23bc2719ffd0a660758507cacd"
+  },
+  "loopbackLabelsVerified": true,
+  "assetCacheFingerprint": "5851925eb78e62ee"
+}

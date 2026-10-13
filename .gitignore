@@ -1,0 +1,9 @@
+node_modules/
+out/
+cache/
+.env*
+*.log
+.DS_Store
+runtime/
+wallets/
+private/

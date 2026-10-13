@@ -1,0 +1,14 @@
+{
+  "duration": 15,
+  "assertions": [
+    {
+      "kind": "appearsBy",
+      "selector": "#arc-recovery-title",
+      "bySec": 1
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#arc-recovery-title"
+    }
+  ]
+}

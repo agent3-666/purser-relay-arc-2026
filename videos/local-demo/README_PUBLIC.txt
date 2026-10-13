@@ -1,0 +1,1 @@
+60-second controlled local Arc engineering demonstration. NOT MAINNET. MP4 in docs/assets/local-engineering-demo.mp4. Complete original local receipt is included in this source. Content-quality verification is not claimed. AI-assisted editable Hyperframes composition.

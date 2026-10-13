@@ -1,0 +1,37 @@
+Compiling 1 files with Solc 0.8.28
+Solc 0.8.28 finished in 401.21ms
+Compiler run successful with warnings:
+Warning (5159): "selfdestruct" has been deprecated. Note that, starting from the Cancun hard fork, the underlying opcode no longer deletes the code and data associated with an account and only transfers its Ether to the beneficiary, unless executed in the same transaction in which the contract was created (see EIP-6780). Any use in newly deployed contracts is strongly discouraged even if the new behavior is taken into account. Future changes to the EVM might further reduce the functionality of the opcode.
+ --> test/RelayArc.t.sol:7:91:
+  |
+7 | contract Donation { constructor() payable {} function donate(address payable r) external {selfdestruct(r);} }
+  |                                                                                           ^^^^^^^^^^^^
+
+
+Ran 23 tests for test/RelayArc.t.sol:RelayArcTest
+[PASS] testApprovedCannotRefund() (gas: 431761)
+[PASS] testCrossChainContractOrderDomains() (gas: 2050117)
+[PASS] testDeadlineExactFunded() (gas: 426340)
+[PASS] testDeadlineExactSubmittedRefund() (gas: 415653)
+[PASS] testDuplicateAfterTerminal() (gas: 442836)
+[PASS] testDuplicateIntentPositiveFutureDeadline() (gas: 366054)
+[PASS] testForcedDonationDoesNotCreateCredit() (gas: 414306)
+[PASS] testFuzzAmountConservation(uint96,bool) (runs: 256, μ: 433633, ~: 461796)
+[PASS] testHashBindings() (gas: 410255)
+[PASS] testLifecycleIndependentPayeeAndPermanentCredit() (gas: 454946)
+[PASS] testNative18SubMicroAmountPreserved() (gas: 430964)
+[PASS] testOnlyOwnerApproveAndReplace() (gas: 386661)
+[PASS] testPayeeReentrancyBlocked() (gas: 609571)
+[PASS] testRefundDoesNotCallPayee() (gas: 494199)
+[PASS] testRefundTerminalRejectsAll() (gas: 401509)
+[PASS] testRejectingOwnerRetainsRefundCredit() (gas: 584327)
+[PASS] testRejectingPayeeIsolationAndRetry() (gas: 1256534)
+[PASS] testRepeatedClaimRejected() (gas: 436701)
+[PASS] testReplacementRejectsLateAndOldEpoch() (gas: 444787)
+[PASS] testRevocationTombstone() (gas: 347463)
+[PASS] testTwoWorkerRaceAndSubmittedFreeze() (gas: 409125)
+[PASS] testUnauthorizedWorker() (gas: 339265)
+[PASS] testWrongValueAndZeroAddresses() (gas: 70797)
+Suite result: ok. 23 passed; 0 failed; 0 skipped; finished in 19.27ms (33.79ms CPU time)
+
+Ran 1 test suite in 19.78ms (19.27ms CPU time): 23 tests passed, 0 failed, 0 skipped (23 total tests)

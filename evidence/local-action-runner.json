@@ -1,0 +1,78 @@
+{
+  "scope": "LOCAL_NOT_MAINNET",
+  "cap18": "250000000000000000",
+  "records": [
+    {
+      "negative": "badApproval",
+      "exit": 1,
+      "noNonceChange": true,
+      "error": "<CANDIDATE>/src/spend.ts:6\n if(a.project!=='purser-relay-arc'||a.chainId!==CHAIN_ID.toString()||a.scope!==(local?'LOCAL_ONLY':'ARC_MAINNET_5042')||typeof a.humanApprovalReference!=='string'||!a.humanApprovalReference.trim()||a.approvedTotalCap18!==TOTAL_CAP.toString()||!a.actions||a.actions[p.actionId]!==planHash(p)||!Array.isArray(a.roleAddresses)||typeof a.globalLedgerPath!=='string'||!a.globalLedgerPath.startsWith('/'))throw Error('Missing or mismatched human approval / plan binding / total cap');\n                                                                                                                                                                                                                                                                                                                                                                                                                     ^\n\n\nError: Missing or mismatched human approval / plan binding / total cap\n    at checkApproval (<CANDIDATE>/src/spend.ts:6:406)\n    at <anonymous> (<CANDIDATE>/scripts/execute-action.ts:6:109)\n\nNode.js v20.19.6\n"
+    },
+    {
+      "negative": "wrongWallet",
+      "exit": 1,
+      "noNonceChange": true,
+      "error": "<CANDIDATE>/scripts/execute-action.ts:9\nconst secret=JSON.parse(await readFile(wf,'utf8'));if(secret.project!=='purser-relay-arc'||secret.scope!==(local?'LOCAL_ONLY':'ARC_MAINNET_5042'))throw Error('Wallet scope mismatch');const wallet=new Wallet(secret.privateKey,provider);if(!a.roleAddresses.map(getAddress).includes(wallet.address))throw Error('Signer is not an approved role address');if(wallet.address!==address(p.from))throw Error('Wrong role wallet');\n                                                                                                                                                                                                                                                                                                                                                                                                        ^\n\n\nError: Wrong role wallet\n    at <anonymous> (<CANDIDATE>/scripts/execute-action.ts:9:393)\n\nNode.js v20.19.6\n"
+    },
+    {
+      "negative": "gasFloor",
+      "exit": 1,
+      "noNonceChange": true,
+      "error": "<CANDIDATE>/scripts/execute-action.ts:18\n const tx={from:wallet.address,to,data,value};await provider.call(tx);const estimate=await provider.estimateGas(tx);const gas=BigInt(p.gasLimit),fee=BigInt(p.maxFeePerGas);if(gas<estimate||fee<FEE_FLOOR)throw Error('Reviewed gas estimate/floor insufficient');\n                                                                                                                                                                                                                 ^\n\n\nError: Reviewed gas estimate/floor insufficient\n    at <anonymous> (<CANDIDATE>/scripts/execute-action.ts:18:210)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n\nNode.js v20.19.6\n"
+    },
+    {
+      "negative": "totalBudget",
+      "exit": 1,
+      "noNonceChange": true,
+      "error": "<CANDIDATE>/src/spend.ts:12\n const cap=budget(gas,fee,value);const used=[...unique.values()].reduce((a,b)=>a+b,0n);if(cap>balance||used+cap>TOTAL_CAP)throw Error('Role balance or global total budget exceeded');return cap;\n                                                                                                                                ^\n\n\nError: Role balance or global total budget exceeded\n    at reserveSpend (<CANDIDATE>/src/spend.ts:12:129)\n    at <anonymous> (<CANDIDATE>/scripts/execute-action.ts:19:68)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n\nNode.js v20.19.6\n"
+    },
+    {
+      "action": "deploy",
+      "exit": 0,
+      "stdout": "{\n  \"scope\": \"LOCAL_NOT_MAINNET\",\n  \"actionId\": \"local-deploy\",\n  \"action\": \"deploy\",\n  \"txHash\": \"0x72f453e4bcf21bf79d83dba38a4e78e30cb30c4b2022c5cc26cbdf2f0dc2b057\",\n  \"receiptBlockHash\": \"0x43eeda7577e2f3e12c452a7a3b5a87492c18af6000f9cd5d4f5c5b36ff06a247\",\n  \"actualFee18\": \"31505440000000000\",\n  \"reserved18\": \"75613080000000000\",\n  \"businessVerified\": true,\n  \"business\": {\n    \"deployedContract\": \"0x3101042Db815462471d456A0e218A57b1cb0ADd9\",\n    \"runtimeHash\": \"0x0a85b62a4fe305fcb9da3d3f9ef40dafd93e96e572eb1ab7b534d71559a0cc23\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "action": "transfer",
+      "exit": 0,
+      "stdout": "{\n  \"scope\": \"LOCAL_NOT_MAINNET\",\n  \"actionId\": \"local-transfer\",\n  \"action\": \"transfer\",\n  \"txHash\": \"0xfd16c8717d4c6d3185ba6fd01a3124492ef5e63b9ddebc16a7d0cfe2858d96fc\",\n  \"receiptBlockHash\": \"0xb93ddd6dc662073399e7a2b7bacb2378e52363ef2c8a8fd7c55a41a1a61ac824\",\n  \"actualFee18\": \"420000000000000\",\n  \"reserved18\": \"2008000000000000\",\n  \"businessVerified\": true,\n  \"business\": {\n    \"recipient\": \"0x43cF4a7d6297491cedb07eFD0E82A18a5428B674\",\n    \"value18\": \"1000000000000000\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "action": "createOrder",
+      "exit": 0,
+      "stdout": "{\n  \"scope\": \"LOCAL_NOT_MAINNET\",\n  \"actionId\": \"local-createOrder\",\n  \"action\": \"createOrder\",\n  \"txHash\": \"0xc3a83aa331dd26b37c3b3c00e87a0c1f8b2f1e8821df24174786e26849fa628c\",\n  \"receiptBlockHash\": \"0x362cea238d2414ed3263289d0089e5bef3e838f0b96bc026019cd5a7a4172204\",\n  \"actualFee18\": \"6512600000000000\",\n  \"reserved18\": \"17687680000000000\",\n  \"businessVerified\": true,\n  \"business\": {\n    \"orderId\": \"0xdbfba8c79570a8325144f963be3f2bfc85159897e61bcc1131bb2a0bdfb2b6bf\",\n    \"status\": 1,\n    \"epoch\": \"1\",\n    \"principal18\": \"1000000000000000\",\n    \"credit18\": \"0\",\n    \"event\": \"OrderCreated\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "action": "replaceWorker",
+      "exit": 0,
+      "stdout": "{\n  \"scope\": \"LOCAL_NOT_MAINNET\",\n  \"actionId\": \"local-replaceWorker\",\n  \"action\": \"replaceWorker\",\n  \"txHash\": \"0x08e1b475f755f58c9866306895180a743c29f5b967c35fe73daf620f8cac6f85\",\n  \"receiptBlockHash\": \"0xe69b75b296787eb05a7f2f34fbfb72a772e1873226d933f5734b2993701e2334\",\n  \"actualFee18\": \"1366480000000000\",\n  \"reserved18\": \"4204480000000000\",\n  \"businessVerified\": true,\n  \"business\": {\n    \"orderId\": \"0xdbfba8c79570a8325144f963be3f2bfc85159897e61bcc1131bb2a0bdfb2b6bf\",\n    \"status\": 1,\n    \"epoch\": \"2\",\n    \"principal18\": \"1000000000000000\",\n    \"credit18\": \"0\",\n    \"event\": \"WorkerReplaced\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "action": "submitDeliverable",
+      "exit": 0,
+      "stdout": "{\n  \"scope\": \"LOCAL_NOT_MAINNET\",\n  \"actionId\": \"local-submitDeliverable\",\n  \"action\": \"submitDeliverable\",\n  \"txHash\": \"0x34412a02845d066ca667bc77beb44597f085d7e87cad68dd5834f02d9536add2\",\n  \"receiptBlockHash\": \"0xb3554fea34081a62ca89a64b69f07d4c503a94bc9c118b0bfab76aea04eba1f6\",\n  \"actualFee18\": \"1360180000000000\",\n  \"reserved18\": \"4185480000000000\",\n  \"businessVerified\": true,\n  \"business\": {\n    \"orderId\": \"0xdbfba8c79570a8325144f963be3f2bfc85159897e61bcc1131bb2a0bdfb2b6bf\",\n    \"status\": 2,\n    \"epoch\": \"2\",\n    \"principal18\": \"1000000000000000\",\n    \"credit18\": \"0\",\n    \"event\": \"DeliverableSubmitted\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "action": "approve",
+      "exit": 0,
+      "stdout": "{\n  \"scope\": \"LOCAL_NOT_MAINNET\",\n  \"actionId\": \"local-approve\",\n  \"action\": \"approve\",\n  \"txHash\": \"0x508e24208f1c19433a8755eca2815ab980f3121f4ff0938c76452aac19fcb80e\",\n  \"receiptBlockHash\": \"0x52ce841b1eeee51c4f49fd3cc962bc61e46b82c1bdee7162192a852d9ac0fe7e\",\n  \"actualFee18\": \"1845280000000000\",\n  \"reserved18\": \"5640880000000000\",\n  \"businessVerified\": true,\n  \"business\": {\n    \"orderId\": \"0xdbfba8c79570a8325144f963be3f2bfc85159897e61bcc1131bb2a0bdfb2b6bf\",\n    \"status\": 3,\n    \"epoch\": \"2\",\n    \"principal18\": \"1000000000000000\",\n    \"credit18\": \"1000000000000000\",\n    \"event\": \"OrderApproved\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "negative": "recoveryCombinedTotalBudget",
+      "exit": 1,
+      "noNonceChange": true,
+      "creditRetained": true,
+      "error": "<CANDIDATE>/src/spend.ts:12\n const cap=budget(gas,fee,value);const used=[...unique.values()].reduce((a,b)=>a+b,0n);if(cap>balance||used+cap>TOTAL_CAP)throw Error('Role balance or global total budget exceeded');return cap;\n                                                                                                                                ^\n\n\nError: Role balance or global total budget exceeded\n    at reserveSpend (<CANDIDATE>/src/spend.ts:12:129)\n    at <anonymous> (<CANDIDATE>/scripts/recovery.ts:49:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n\nNode.js v20.19.6\n"
+    },
+    {
+      "action": "claimPayment-shared-global-ledger",
+      "exit": 0,
+      "stdout": "{\n  \"readOnly\": true,\n  \"chainId\": \"5042\",\n  \"contract\": \"0x3101042Db815462471d456A0e218A57b1cb0ADd9\",\n  \"orderId\": \"0xdbfba8c79570a8325144f963be3f2bfc85159897e61bcc1131bb2a0bdfb2b6bf\",\n  \"codehash\": \"0x0a85b62a4fe305fcb9da3d3f9ef40dafd93e96e572eb1ab7b534d71559a0cc23\",\n  \"block\": 140,\n  \"status\": \"Approved\",\n  \"owner\": \"0xC2e7f8F882A0358a01281731A518993c22a47615\",\n  \"payee\": \"0xc28702B54Bc292c52C8FcDeb726315D7e9598cC2\",\n  \"workerA\": \"0x43cF4a7d6297491cedb07eFD0E82A18a5428B674\",\n  \"workerB\": \"0x9A7B69A3814b3C821d09AF666C76bf7fa735Ec2e\",\n  \"epoch\": \"2\",\n  \"principal18\": \"1000000000000000\",\n  \"principalUSDC\": \"0.001\",\n  \"credit18\": \"1000000000000000\",\n  \"deadline\": \"1791919988\",\n  \"observedAt\": \"2026-10-13T19:12:23.869Z\"\n}\n{\"status\":\"CONFIRMED\",\"action\":\"claimPayment\",\"txHash\":\"0x83fb560cdcc350e1eb4791119e53c4525a264adb28b9cfea54e617cb70c7c0e3\",\"gasUsed\":\"74300\",\"effectiveGasPrice\":\"20000000000\",\"actualFee18\":\"1486000000000000\",\"cap18\":\"4791150000000000\"}\n"
+    }
+  ]
+}

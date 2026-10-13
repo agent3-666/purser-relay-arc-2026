@@ -1,0 +1,1 @@
+{"name":"purser-relay-arc","version":"1.0.0","private":true,"type":"module","scripts":{"typecheck":"tsc --noEmit","test:ts":"tsx --test test-ts/*.test.ts","recovery":"tsx scripts/recovery.ts","budget":"tsx scripts/budget.ts"},"dependencies":{"ethers":"6.17.0"},"devDependencies":{"@types/node":"22.15.30","tsx":"4.20.3","typescript":"5.8.3"}}

@@ -1,0 +1,99 @@
+
+> purser-relay-arc@1.0.0 test:ts
+> tsx --test test-ts/*.test.ts
+
+TAP version 13
+# Subtest: verified RPC chain/code positive and wrong chain/code rejected
+ok 1 - verified RPC chain/code positive and wrong chain/code rejected
+  ---
+  duration_ms: 3.843583
+  ...
+# Subtest: missing or inconsistent receipt remains UNKNOWN
+ok 2 - missing or inconsistent receipt remains UNKNOWN
+  ---
+  duration_ms: 0.199167
+  ...
+# Subtest: receipt gas accounting separate from own events
+ok 3 - receipt gas accounting separate from own events
+  ---
+  duration_ms: 0.342375
+  ...
+# Subtest: two real processes cannot enter signing critical section; killed owner leaves lock
+ok 4 - two real processes cannot enter signing critical section; killed owner leaves lock
+  ---
+  duration_ms: 315.694417
+  ...
+# Subtest: canonical parent catches symlink into repository
+ok 5 - canonical parent catches symlink into repository
+  ---
+  duration_ms: 1.084666
+  ...
+# Subtest: exact native18 small fractional and large values
+ok 6 - exact native18 small fractional and large values
+  ---
+  duration_ms: 0.764792
+  ...
+# Subtest: 6-bit ERC20 view is not native balance
+ok 7 - 6-bit ERC20 view is not native balance
+  ---
+  duration_ms: 0.087958
+  ...
+# Subtest: reject float-like malformed amounts
+ok 8 - reject float-like malformed amounts
+  ---
+  duration_ms: 0.142291
+  ...
+# Subtest: valid handoff and actual bad domains
+ok 9 - valid handoff and actual bad domains
+  ---
+  duration_ms: 1.465333
+  ...
+# Subtest: order identity separates contract owner chain and intent
+ok 10 - order identity separates contract owner chain and intent
+  ---
+  duration_ms: 3.012875
+  ...
+# Subtest: gas floor, full cap and reserve
+ok 11 - gas floor, full cap and reserve
+  ---
+  duration_ms: 0.183292
+  ...
+# Subtest: durable journal survives cold process and blocks unknown resign
+ok 12 - durable journal survives cold process and blocks unknown resign
+  ---
+  duration_ms: 51.625333
+  ...
+# Subtest: prepared crash window cannot be automatically resigned
+ok 13 - prepared crash window cannot be automatically resigned
+  ---
+  duration_ms: 0.140125
+  ...
+# Subtest: malformed or truncated journal fails closed
+ok 14 - malformed or truncated journal fails closed
+  ---
+  duration_ms: 3.147917
+  ...
+# Subtest: handoff must match every chain-verified immutable term
+ok 15 - handoff must match every chain-verified immutable term
+  ---
+  duration_ms: 2.400458
+  ...
+# Subtest: exact approval positive and actual bad approvals rejected
+ok 16 - exact approval positive and actual bad approvals rejected
+  ---
+  duration_ms: 1.620167
+  ...
+# Subtest: global cap and independent role balance enforced; prepared/unknown never resign
+ok 17 - global cap and independent role balance enforced; prepared/unknown never resign
+  ---
+  duration_ms: 2.081084
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 17
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 485.554667

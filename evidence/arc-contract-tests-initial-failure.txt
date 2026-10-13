@@ -1,0 +1,44 @@
+No files changed, compilation skipped
+
+Ran 23 tests for test/RelayArc.t.sol:RelayArcTest
+[PASS] testApprovedCannotRefund() (gas: 431761)
+[PASS] testCrossChainContractOrderDomains() (gas: 2050117)
+[PASS] testDeadlineExactFunded() (gas: 426340)
+[PASS] testDeadlineExactSubmittedRefund() (gas: 421173)
+[FAIL: TransferFailed()] testDuplicateAfterTerminal() (gas: 1040444488)
+[PASS] testDuplicateIntentPositiveFutureDeadline() (gas: 366054)
+[PASS] testForcedDonationDoesNotCreateCredit() (gas: 414306)
+[FAIL: TransferFailed(); counterexample: calldata=0xdc4f7074000000000000000000000000000000000000000000000000003fe435c5d68e650000000000000000000000000000000000000000000000000000000000000001 args=[17983843136343653 [1.798e16], true]] testFuzzAmountConservation(uint96,bool) (runs: 1, μ: 410062, ~: 410062)
+[PASS] testHashBindings() (gas: 410255)
+[FAIL: TransferFailed()] testLifecycleIndependentPayeeAndPermanentCredit() (gas: 1040445190)
+[FAIL: TransferFailed()] testNative18SubMicroAmountPreserved() (gas: 1040444485)
+[PASS] testOnlyOwnerApproveAndReplace() (gas: 386661)
+[PASS] testPayeeReentrancyBlocked() (gas: 609571)
+[PASS] testRefundDoesNotCallPayee() (gas: 501099)
+[PASS] testRefundTerminalRejectsAll() (gas: 408409)
+[PASS] testRejectingOwnerRetainsRefundCredit() (gas: 583116)
+[FAIL: TransferFailed()] testRejectingPayeeIsolationAndRetry() (gas: 1040471260)
+[FAIL: TransferFailed()] testRepeatedClaimRejected() (gas: 1040444500)
+[PASS] testReplacementRejectsLateAndOldEpoch() (gas: 444787)
+[PASS] testRevocationTombstone() (gas: 347463)
+[PASS] testTwoWorkerRaceAndSubmittedFreeze() (gas: 409125)
+[PASS] testUnauthorizedWorker() (gas: 339265)
+[PASS] testWrongValueAndZeroAddresses() (gas: 70797)
+Suite result: FAILED. 17 passed; 6 failed; 0 skipped; finished in 11.89ms (31.74ms CPU time)
+
+Ran 1 test suite in 13.79ms (11.89ms CPU time): 17 tests passed, 6 failed, 0 skipped (23 total tests)
+
+Failing tests:
+Encountered 6 failing tests in test/RelayArc.t.sol:RelayArcTest
+[FAIL: TransferFailed()] testDuplicateAfterTerminal() (gas: 1040444488)
+[FAIL: TransferFailed(); counterexample: calldata=0xdc4f7074000000000000000000000000000000000000000000000000003fe435c5d68e650000000000000000000000000000000000000000000000000000000000000001 args=[17983843136343653 [1.798e16], true]] testFuzzAmountConservation(uint96,bool) (runs: 1, μ: 410062, ~: 410062)
+[FAIL: TransferFailed()] testLifecycleIndependentPayeeAndPermanentCredit() (gas: 1040445190)
+[FAIL: TransferFailed()] testNative18SubMicroAmountPreserved() (gas: 1040444485)
+[FAIL: TransferFailed()] testRejectingPayeeIsolationAndRetry() (gas: 1040471260)
+[FAIL: TransferFailed()] testRepeatedClaimRejected() (gas: 1040444500)
+
+Encountered a total of 6 failing tests, 17 tests succeeded
+
+Tip: Run `forge test --rerun` to retry only the 6 failed tests
+
+Fuzz seed: 0xe76f91f24e7696c8713b59efbe377e044e694457a6a7d6de512c9e243ae472b0 (use `--fuzz-seed` to reproduce)

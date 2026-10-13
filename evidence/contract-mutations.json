@@ -1,0 +1,53 @@
+{
+  "baseSha256": "9df469a9e71b4dd21acbef087954fd875c86c2642990b10c77215a0e6bd34936",
+  "results": [
+    {
+      "name": "no-intent-uniqueness",
+      "test": "testDuplicateIntentPositiveFutureDeadline",
+      "exitCode": 1,
+      "killed": true,
+      "sourceSha256": "ef419c1248b61b07eafe6bfc591d23310d77ddac558bfe9319752fcbb8889b23",
+      "log": "mutation-no-intent-uniqueness.txt"
+    },
+    {
+      "name": "no-worker-authorization",
+      "test": "testUnauthorizedWorker",
+      "exitCode": 1,
+      "killed": true,
+      "sourceSha256": "cb2d0246c7900bfa4b40660153c1eb11b11e68b403596300cdb9e52482b16109",
+      "log": "mutation-no-worker-authorization.txt"
+    },
+    {
+      "name": "approved-clawback",
+      "test": "testApprovedCannotRefund",
+      "exitCode": 1,
+      "killed": true,
+      "sourceSha256": "5f2b72cfd24e7fd95d8f2227e59e67a435a317cdc56ba05903fcb284e2eef9ed",
+      "log": "mutation-approved-clawback.txt"
+    },
+    {
+      "name": "repeated-claim",
+      "test": "testRepeatedClaimRejected",
+      "exitCode": 1,
+      "killed": true,
+      "sourceSha256": "6f432fc014e349bd94256a326c5979143e3dcd323224672436389f7f769a7e16",
+      "log": "mutation-repeated-claim.txt"
+    },
+    {
+      "name": "native-six-decimal-truncation",
+      "test": "testNative18SubMicroAmountPreserved",
+      "exitCode": 1,
+      "killed": true,
+      "sourceSha256": "f4eacce5b458c55128b0a348944bd457ba4c6b5590466eb2dfcbb8af326af38b",
+      "log": "mutation-native-six-decimal-truncation.txt"
+    },
+    {
+      "name": "no-epoch-guard",
+      "test": "testReplacementRejectsLateAndOldEpoch",
+      "exitCode": 1,
+      "killed": true,
+      "sourceSha256": "82dc1f9418979d00a5f195ec8e2a22fc9f21a5843fcfb82b05ddda8c48bbc7d5",
+      "log": "mutation-no-epoch-guard.txt"
+    }
+  ]
+}

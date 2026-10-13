@@ -1,0 +1,14 @@
+{
+  "duration": 15,
+  "assertions": [
+    {
+      "kind": "appearsBy",
+      "selector": "#arc-limits-title",
+      "bySec": 1
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#arc-limits-title"
+    }
+  ]
+}

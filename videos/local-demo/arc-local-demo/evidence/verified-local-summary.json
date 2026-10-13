@@ -1,0 +1,72 @@
+{
+  "scope": "LOCAL_NOT_MAINNET",
+  "chainId": 5042,
+  "workerJournalDiscarded": true,
+  "mainApplicationRequired": false,
+  "claimIndependentProcess": true,
+  "refundIndependentProcess": true,
+  "claim": {
+    "status": "CONFIRMED",
+    "action": "claimPayment",
+    "txHash": "0xe8dac8b89b71c8cdbc96327db015ff897d8b5c0a64f3f67f68cbea4034caeafb",
+    "gasUsed": "74300",
+    "effectiveGasPrice": "20000000000",
+    "actualFee18": "1486000000000000",
+    "cap18": "4791150000000000"
+  },
+  "refund": {
+    "status": "CONFIRMED",
+    "action": "claimRefund",
+    "txHash": "0xb78232eb85cabf9ec98869bef2a5abe0143e5dfe34c7b8e3522ba9e73ba515fe",
+    "gasUsed": "74324",
+    "effectiveGasPrice": "20000000000",
+    "actualFee18": "1486480000000000",
+    "cap18": "4792662000000000"
+  },
+  "lateOldWorker": {
+    "status": 0,
+    "hash": "0x4c73ffe0f93d1a24a86c9ddb1bd01a7e3517c81feb18415a1d811cf2b1394cd0"
+  },
+  "finalCredits": [
+    "0",
+    "0"
+  ],
+  "outstandingLiabilities18": "0",
+  "contractBalance18": "0",
+  "contractTestsPassed": 23,
+  "contractMutantsKilled": 6,
+  "sourceHashes": {
+    "candidate/evidence/local-cold-recovery.json": "d7b99c9c045334d4cd24ec9a6a55fb876b9677245e6cb56899b037b0babb7d95",
+    "evidence/arc-contract-mutations.json": "5d9e46e7ff78186dc3dfc537bb2d795c6e66ee75d92463e674187b25a6386445",
+    "evidence/arc-contract-tests.txt": "4c1ffd586a27c0546633528e2643bcd282dfb657e447ba8a5966d81114c433a8",
+    "candidate/contracts/PurserRelayArc.sol": "9df469a9e71b4dd21acbef087954fd875c86c2642990b10c77215a0e6bd34936",
+    "candidate/package.json": "563269dda6b5d7c70f1314f3a03aaea9ec8848e7c9e25e35006ecd3bce0089b5",
+    "candidate/package-lock.json": "7d3221f0b539e45b5c9744e1d17258ac622de9f0acdbea9ccbf1389053712362",
+    "candidate/scripts/local-cold-recovery.ts": "e00da5e56a72b496c453635111abef082b664ab317105d63e0b0682edef6dd6b",
+    "candidate/scripts/recovery.ts": "4a282798862291fca813c1b73c17d4495ca1e0e02572a6bdd5e097f456b34049",
+    "candidate/examples/request.json": "d5101a428eb5001cd7cdc86742d344d0f804092606efe911e50090dc8a2e9848",
+    "candidate/examples/acceptance-rule.json": "0990e330a2775fb426c06195b7ee47487081334240ee765ff2aed279536c6399",
+    "candidate/examples/report.json": "1cc21b9f5a4854f366cdbb5750fea2f6f0b6dbefb4abd4c67b7aac7f8ea60409"
+  },
+  "frozenReceipt": "evidence/local-run-frozen.json",
+  "frozenReceiptSha256": "d7b99c9c045334d4cd24ec9a6a55fb876b9677245e6cb56899b037b0babb7d95",
+  "exampleBinding": {
+    "requestHash": "0x04e6e207e86235f4ad1bbafe78133e693b61e029b60607f4ff6dd058efc40461",
+    "acceptanceRuleHash": "0x8a4e922d60da95f7a344f68b2f4a1c178ecd9b0e05faac443f56c85b3cc782ee",
+    "deliverableHash": "0xe0e20332d3075d8e520f7473f36aef1fac037e598e4d271b73fb6ef26da6bc8c",
+    "files": {
+      "examples/request.json": "0x04e6e207e86235f4ad1bbafe78133e693b61e029b60607f4ff6dd058efc40461",
+      "examples/acceptance-rule.json": "0x8a4e922d60da95f7a344f68b2f4a1c178ecd9b0e05faac443f56c85b3cc782ee",
+      "examples/report.json": "0xe0e20332d3075d8e520f7473f36aef1fac037e598e4d271b73fb6ef26da6bc8c"
+    },
+    "schemaCheck": {
+      "structuralCheck": "PASS",
+      "truthQualityVerified": false,
+      "requestHash": "0x04e6e207e86235f4ad1bbafe78133e693b61e029b60607f4ff6dd058efc40461",
+      "deliverableHash": "0xe0e20332d3075d8e520f7473f36aef1fac037e598e4d271b73fb6ef26da6bc8c",
+      "acceptanceRuleHash": "0x8a4e922d60da95f7a344f68b2f4a1c178ecd9b0e05faac443f56c85b3cc782ee"
+    },
+    "truthAccuracyClaim": false
+  },
+  "sdkVersion": "6.17.0"
+}

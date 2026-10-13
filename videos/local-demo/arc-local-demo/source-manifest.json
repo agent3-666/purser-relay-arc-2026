@@ -1,0 +1,20 @@
+{
+  "index.html": "d7413a4fc5d771c4f4ac065bcac1707ccdd2179c2d333934be2005e1024c4dd5",
+  "index.motion.json": "04baf527665a127021989f1c09f40907704b5677006c207e0e34b07e13f2724a",
+  "hyperframes.json": "ad5dadeef78a520800a9e5cdd27a92ff5ac37f11b6a07f611b6b52b9f8c79a17",
+  "package.json": "25690d0f2b7213c5322093382289276c8d1f1f7a7ccb215abadd5def627c8b94",
+  "package-lock.json": "496c450e8631f5f3f8d9b7c013c2c633c8b7b1ba57b08319520ba5f98d69cb10",
+  "README.md": "f3877f2079d71e66d7866a2c56c8fad8f299c7f8b75028101986e06ca5b5f167",
+  "evidence/verified-local-summary.json": "065793f86393d9b4ff7539b48c4c1c886308ccdc24b08d973381928e0312b04c",
+  "assets/gsap.min.js": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+  "assets/GSAP-LICENSE.txt": "d7fad4e60ee3e4272595940350e2cfef0920fa549c7761686085f43a00d563a8",
+  "compositions/arc-limits.html": "900982ede5580d9a71d6987e35c334da154b53231fbe7fc99d711f8e2675a044",
+  "compositions/arc-limits.motion.json": "fc7bc3add4e5dd4e0a75ae91135b3ab127edf3cedb0760c540ef9d4e90b37f59",
+  "compositions/arc-recovery.html": "9e346ce781839e9116ea0841fbabcc5c978ae4e8510e2b428b8190e8e1150fbc",
+  "compositions/arc-recovery.motion.json": "6788555f258a70b8fc3895c23250b2cf050ead9ac3923bfe8ac09349306e41cc",
+  "compositions/arc-roles.html": "189621da734a1c556f38e8af70b33c916933cf2e33179f761caaa4b7098ba8db",
+  "compositions/arc-roles.motion.json": "88bb0338150bb5037194688e5a24b84d5a1e64862b90397e0b5c7fdfab58d126",
+  "compositions/arc-tests.html": "dd2babd9e18d2b9dd88cf957878d5ae5ae0d098b18d139eb4684a0ba9183fca1",
+  "compositions/arc-tests.motion.json": "cb1aa3bd6a08bb64fabae545c94a8cf6f6b1c01f588941964f45f5fc4e63ab55",
+  "evidence/local-run-frozen.json": "d7b99c9c045334d4cd24ec9a6a55fb876b9677245e6cb56899b037b0babb7d95"
+}

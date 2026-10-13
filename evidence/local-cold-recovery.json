@@ -1,0 +1,221 @@
+{
+  "scope": "LOCAL_NOT_MAINNET",
+  "chainId": 5042,
+  "contract": "0x1eA7b905a734404E63e4186C766e115B055087F5",
+  "codehash": "0x0a85b62a4fe305fcb9da3d3f9ef40dafd93e96e572eb1ab7b534d71559a0cc23",
+  "workerJournalDiscarded": true,
+  "mainApplicationRequired": false,
+  "claimIndependentProcess": true,
+  "refundIndependentProcess": true,
+  "exampleBinding": {
+    "requestHash": "0x04e6e207e86235f4ad1bbafe78133e693b61e029b60607f4ff6dd058efc40461",
+    "acceptanceRuleHash": "0x8a4e922d60da95f7a344f68b2f4a1c178ecd9b0e05faac443f56c85b3cc782ee",
+    "deliverableHash": "0xe0e20332d3075d8e520f7473f36aef1fac037e598e4d271b73fb6ef26da6bc8c",
+    "files": {
+      "examples/request.json": "0x04e6e207e86235f4ad1bbafe78133e693b61e029b60607f4ff6dd058efc40461",
+      "examples/acceptance-rule.json": "0x8a4e922d60da95f7a344f68b2f4a1c178ecd9b0e05faac443f56c85b3cc782ee",
+      "examples/report.json": "0xe0e20332d3075d8e520f7473f36aef1fac037e598e4d271b73fb6ef26da6bc8c"
+    },
+    "schemaCheck": {
+      "structuralCheck": "PASS",
+      "truthQualityVerified": false,
+      "requestHash": "0x04e6e207e86235f4ad1bbafe78133e693b61e029b60607f4ff6dd058efc40461",
+      "deliverableHash": "0xe0e20332d3075d8e520f7473f36aef1fac037e598e4d271b73fb6ef26da6bc8c",
+      "acceptanceRuleHash": "0x8a4e922d60da95f7a344f68b2f4a1c178ecd9b0e05faac443f56c85b3cc782ee"
+    },
+    "truthAccuracyClaim": false
+  },
+  "balances": [
+    {
+      "address": "0xF8A8Cc8a81130A0f3e7dd1BFd66cb7be921Af0d8",
+      "before18": "100000000000000000000",
+      "after18": "99948837160000000000"
+    },
+    {
+      "address": "0xC542CA72FcbcDa2ce976039443df6E76823A4a38",
+      "before18": "100000000000000000000",
+      "after18": "99998919920000000000"
+    },
+    {
+      "address": "0xB38eE39668EA6863dF6DE652F849147fD7537883",
+      "before18": "100000000000000000000",
+      "after18": "100000000000000000000"
+    },
+    {
+      "address": "0x59E92e7a1A66A195158583F8E0132b333492676D",
+      "before18": "100000000000000000000",
+      "after18": "99998639820000000000"
+    },
+    {
+      "address": "0xf76114d45efd1036Cf07f13eE401d8A4Aa650e35",
+      "before18": "100000000000000000000",
+      "after18": "99999514000000000000"
+    }
+  ],
+  "finalCredits": [
+    "0",
+    "0"
+  ],
+  "outstandingLiabilities18": "0",
+  "contractBalance18": "0",
+  "records": [
+    {
+      "name": "deployment",
+      "hash": "0xea59ff68c4a49bbdcd0cc2a1489359cbc08ed952136977d04d7f1593860be572",
+      "status": 1,
+      "gasUsed": "1575272",
+      "effectiveGasPrice": "20000000000",
+      "fee18": "31505440000000000",
+      "blockHash": "0xd7f5105c74606df42de99c192cd891baf2f4444db7f422d5bc9b4b65b09519d8"
+    },
+    {
+      "name": "create",
+      "hash": "0x593a03151f996db18e344a57da2ba1f6bc9bb37b1d223b48fee9c40776ffee50",
+      "status": 1,
+      "blockHash": "0x63821477f2b006795c7b2998e9c7cf0e52e45132952e77f451a963c288af1931",
+      "gasUsed": "325630",
+      "effectiveGasPrice": "20000000000",
+      "fee18": "6512600000000000",
+      "logs": [
+        {
+          "address": "0xffffFFFfFFffffffffffffffFfFFFfffFFFfFFfE",
+          "topics": [
+            "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+            "0x000000000000000000000000f8a8cc8a81130a0f3e7dd1bfd66cb7be921af0d8",
+            "0x0000000000000000000000001ea7b905a734404e63e4186c766e115b055087f5"
+          ],
+          "data": "0x00000000000000000000000000000000000000000000000000038d7ea4c68000"
+        },
+        {
+          "address": "0x1eA7b905a734404E63e4186C766e115B055087F5",
+          "topics": [
+            "0xc09ccd33dfde693459b0ee90d6da8ecc37eca9c2d7fb32d89ba1048527d8c836",
+            "0x58f654edc5b1cc145be327a6e4c1661e9479fef8a0b3a1c82e557d5a499888a2",
+            "0x000000000000000000000000f8a8cc8a81130a0f3e7dd1bfd66cb7be921af0d8",
+            "0x000000000000000000000000f76114d45efd1036cf07f13ee401d8a4aa650e35"
+          ],
+          "data": "0x92c7f00a86aeae4931bfb7b0ac6accd6103c2da6d8f79d21b9857631484c6be804e6e207e86235f4ad1bbafe78133e693b61e029b60607f4ff6dd058efc404618a4e922d60da95f7a344f68b2f4a1c178ecd9b0e05faac443f56c85b3cc782ee00000000000000000000000000000000000000000000000000038d7ea4c68000000000000000000000000000000000000000000000000000000000006ace877a000000000000000000000000c542ca72fcbcda2ce976039443df6e76823a4a38000000000000000000000000b38ee39668ea6863df6de652f849147fd7537883"
+        }
+      ]
+    },
+    {
+      "name": "replace",
+      "hash": "0x98c6b58e6bed3b0c97f7d84a7a45d6a61c6595df74bcef4236e79863e1e09e60",
+      "status": 1,
+      "blockHash": "0x4f6e8a55ea7018aa795f07871f5690efe6b1e74e68b33331245856e88da294b1",
+      "gasUsed": "68324",
+      "effectiveGasPrice": "20000000000",
+      "fee18": "1366480000000000",
+      "logs": [
+        {
+          "address": "0x1eA7b905a734404E63e4186C766e115B055087F5",
+          "topics": [
+            "0xd8db4da91a73e0b339747e3c9663607ad41df4b5650c656b4320124315f77396",
+            "0x58f654edc5b1cc145be327a6e4c1661e9479fef8a0b3a1c82e557d5a499888a2",
+            "0x000000000000000000000000c542ca72fcbcda2ce976039443df6e76823a4a38",
+            "0x00000000000000000000000059e92e7a1a66a195158583f8e0132b333492676d"
+          ],
+          "data": "0x0000000000000000000000000000000000000000000000000000000000000002"
+        }
+      ]
+    },
+    {
+      "name": "late-old-worker",
+      "rejected": true,
+      "hash": "0x4c73ffe0f93d1a24a86c9ddb1bd01a7e3517c81feb18415a1d811cf2b1394cd0",
+      "status": 0,
+      "gasUsed": "54004",
+      "effectiveGasPrice": "20000000000",
+      "fee18": "1080080000000000",
+      "logs": []
+    },
+    {
+      "name": "submit",
+      "hash": "0xdc0f79df53eaad66cf2ce6e05953a8fa3df69300bd7a6db301394cb1cfa7a8ea",
+      "status": 1,
+      "blockHash": "0xe22fdca3f9268e9b4e7cc2193ea4659c4e4db8e1f0b6a125462bc4e5ffe620e9",
+      "gasUsed": "68009",
+      "effectiveGasPrice": "20000000000",
+      "fee18": "1360180000000000",
+      "logs": [
+        {
+          "address": "0x1eA7b905a734404E63e4186C766e115B055087F5",
+          "topics": [
+            "0x3e3210eabb462e2498acd8e3334cc191d4a1a10e4138596b93489ffcbb187b44",
+            "0x58f654edc5b1cc145be327a6e4c1661e9479fef8a0b3a1c82e557d5a499888a2",
+            "0x00000000000000000000000059e92e7a1a66a195158583f8e0132b333492676d"
+          ],
+          "data": "0x04e6e207e86235f4ad1bbafe78133e693b61e029b60607f4ff6dd058efc40461e0e20332d3075d8e520f7473f36aef1fac037e598e4d271b73fb6ef26da6bc8c0000000000000000000000000000000000000000000000000000000000000002"
+        }
+      ]
+    },
+    {
+      "name": "approve",
+      "hash": "0x3824e43992aa7fdea1b737406969ccfc4fd066828325466afdede7f527d083c6",
+      "status": 1,
+      "blockHash": "0x3bec7b30c89947f5a1a5ce1beb133947dfaf57baf3052e482a4ddf535044e081",
+      "gasUsed": "92264",
+      "effectiveGasPrice": "20000000000",
+      "fee18": "1845280000000000",
+      "logs": [
+        {
+          "address": "0x1eA7b905a734404E63e4186C766e115B055087F5",
+          "topics": [
+            "0x122eff9e8db6f932af6125612113a149f25839f3e8a5139bb38dc2eacd31d9cc",
+            "0x58f654edc5b1cc145be327a6e4c1661e9479fef8a0b3a1c82e557d5a499888a2",
+            "0x000000000000000000000000f76114d45efd1036cf07f13ee401d8a4aa650e35"
+          ],
+          "data": "0xe0e20332d3075d8e520f7473f36aef1fac037e598e4d271b73fb6ef26da6bc8c8a4e922d60da95f7a344f68b2f4a1c178ecd9b0e05faac443f56c85b3cc782ee00000000000000000000000000000000000000000000000000038d7ea4c68000"
+        }
+      ]
+    },
+    {
+      "name": "independent-process-claimPayment",
+      "exit": 0,
+      "output": "{\n  \"readOnly\": true,\n  \"chainId\": \"5042\",\n  \"contract\": \"0x1eA7b905a734404E63e4186C766e115B055087F5\",\n  \"orderId\": \"0x58f654edc5b1cc145be327a6e4c1661e9479fef8a0b3a1c82e557d5a499888a2\",\n  \"codehash\": \"0x0a85b62a4fe305fcb9da3d3f9ef40dafd93e96e572eb1ab7b534d71559a0cc23\",\n  \"block\": 147,\n  \"status\": \"Approved\",\n  \"owner\": \"0xF8A8Cc8a81130A0f3e7dd1BFd66cb7be921Af0d8\",\n  \"payee\": \"0xf76114d45efd1036Cf07f13eE401d8A4Aa650e35\",\n  \"workerA\": \"0x59E92e7a1A66A195158583F8E0132b333492676D\",\n  \"workerB\": \"0xB38eE39668EA6863dF6DE652F849147fD7537883\",\n  \"epoch\": \"2\",\n  \"principal18\": \"1000000000000000\",\n  \"principalUSDC\": \"0.001\",\n  \"credit18\": \"1000000000000000\",\n  \"deadline\": \"1791919994\",\n  \"observedAt\": \"2026-10-13T19:12:26.389Z\"\n}\n{\"status\":\"CONFIRMED\",\"action\":\"claimPayment\",\"txHash\":\"0xe8dac8b89b71c8cdbc96327db015ff897d8b5c0a64f3f67f68cbea4034caeafb\",\"gasUsed\":\"74300\",\"effectiveGasPrice\":\"20000000000\",\"actualFee18\":\"1486000000000000\",\"cap18\":\"4791150000000000\"}\n",
+      "error": ""
+    },
+    {
+      "name": "create-refund",
+      "hash": "0x5226a45c9705d0d1782e59a56de42b2cfbc17bf3900921acd5a07cc155373a55",
+      "status": 1,
+      "blockHash": "0xbfdb576d7489a4b6880cf0291ffae7577942275ff559d2347e73d8964f9aaf85",
+      "gasUsed": "308518",
+      "effectiveGasPrice": "20000000000",
+      "fee18": "6170360000000000",
+      "logs": [
+        {
+          "address": "0xffffFFFfFFffffffffffffffFfFFFfffFFFfFFfE",
+          "topics": [
+            "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+            "0x000000000000000000000000f8a8cc8a81130a0f3e7dd1bfd66cb7be921af0d8",
+            "0x0000000000000000000000001ea7b905a734404e63e4186c766e115b055087f5"
+          ],
+          "data": "0x00000000000000000000000000000000000000000000000000038d7ea4c68000"
+        },
+        {
+          "address": "0x1eA7b905a734404E63e4186C766e115B055087F5",
+          "topics": [
+            "0xc09ccd33dfde693459b0ee90d6da8ecc37eca9c2d7fb32d89ba1048527d8c836",
+            "0xcf865a3f8d5957890462d4eab55deb5d4e2214358d21fc98a098ca2b77a78b1d",
+            "0x000000000000000000000000f8a8cc8a81130a0f3e7dd1bfd66cb7be921af0d8",
+            "0x000000000000000000000000f76114d45efd1036cf07f13ee401d8a4aa650e35"
+          ],
+          "data": "0xe276ee06b8d168ab9418d712a6e5c9846565de186593a6005421dc1703e6448b04e6e207e86235f4ad1bbafe78133e693b61e029b60607f4ff6dd058efc404618a4e922d60da95f7a344f68b2f4a1c178ecd9b0e05faac443f56c85b3cc782ee00000000000000000000000000000000000000000000000000038d7ea4c68000000000000000000000000000000000000000000000000000000000006ace83a7000000000000000000000000c542ca72fcbcda2ce976039443df6e76823a4a38000000000000000000000000b38ee39668ea6863df6de652f849147fd7537883"
+        }
+      ]
+    },
+    {
+      "name": "independent-process-expire",
+      "exit": 0,
+      "output": "{\n  \"readOnly\": true,\n  \"chainId\": \"5042\",\n  \"contract\": \"0x1eA7b905a734404E63e4186C766e115B055087F5\",\n  \"orderId\": \"0xcf865a3f8d5957890462d4eab55deb5d4e2214358d21fc98a098ca2b77a78b1d\",\n  \"codehash\": \"0x0a85b62a4fe305fcb9da3d3f9ef40dafd93e96e572eb1ab7b534d71559a0cc23\",\n  \"block\": 150,\n  \"status\": \"Funded\",\n  \"owner\": \"0xF8A8Cc8a81130A0f3e7dd1BFd66cb7be921Af0d8\",\n  \"payee\": \"0xf76114d45efd1036Cf07f13eE401d8A4Aa650e35\",\n  \"workerA\": \"0xC542CA72FcbcDa2ce976039443df6E76823A4a38\",\n  \"workerB\": \"0xB38eE39668EA6863dF6DE652F849147fD7537883\",\n  \"epoch\": \"1\",\n  \"principal18\": \"1000000000000000\",\n  \"principalUSDC\": \"0.001\",\n  \"credit18\": \"0\",\n  \"deadline\": \"1791919015\",\n  \"observedAt\": \"2026-10-13T19:12:27.383Z\"\n}\n{\"status\":\"CONFIRMED\",\"action\":\"expire\",\"txHash\":\"0x3ec6540b5a395b4e9d4bb64737fd08d7a868ceb2204b129406ef09e83d5cff26\",\"gasUsed\":\"63810\",\"effectiveGasPrice\":\"20000000000\",\"actualFee18\":\"1276200000000000\",\"cap18\":\"4130490000000000\"}\n",
+      "error": ""
+    },
+    {
+      "name": "independent-process-claimRefund",
+      "exit": 0,
+      "output": "{\n  \"readOnly\": true,\n  \"chainId\": \"5042\",\n  \"contract\": \"0x1eA7b905a734404E63e4186C766e115B055087F5\",\n  \"orderId\": \"0xcf865a3f8d5957890462d4eab55deb5d4e2214358d21fc98a098ca2b77a78b1d\",\n  \"codehash\": \"0x0a85b62a4fe305fcb9da3d3f9ef40dafd93e96e572eb1ab7b534d71559a0cc23\",\n  \"block\": 151,\n  \"status\": \"Refundable\",\n  \"owner\": \"0xF8A8Cc8a81130A0f3e7dd1BFd66cb7be921Af0d8\",\n  \"payee\": \"0xf76114d45efd1036Cf07f13eE401d8A4Aa650e35\",\n  \"workerA\": \"0xC542CA72FcbcDa2ce976039443df6E76823A4a38\",\n  \"workerB\": \"0xB38eE39668EA6863dF6DE652F849147fD7537883\",\n  \"epoch\": \"1\",\n  \"principal18\": \"1000000000000000\",\n  \"principalUSDC\": \"0.001\",\n  \"credit18\": \"1000000000000000\",\n  \"deadline\": \"1791919015\",\n  \"observedAt\": \"2026-10-13T19:12:28.198Z\"\n}\n{\"status\":\"CONFIRMED\",\"action\":\"claimRefund\",\"txHash\":\"0xb78232eb85cabf9ec98869bef2a5abe0143e5dfe34c7b8e3522ba9e73ba515fe\",\"gasUsed\":\"74324\",\"effectiveGasPrice\":\"20000000000\",\"actualFee18\":\"1486480000000000\",\"cap18\":\"4792662000000000\"}\n",
+      "error": ""
+    }
+  ]
+}

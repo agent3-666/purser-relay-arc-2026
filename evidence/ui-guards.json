@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "checks": [
+    "recovery no manifest/backend",
+    "unconnected no actions",
+    "owner/payee role separation",
+    "no broadcast before review confirmation",
+    "20 gwei fee floor",
+    "approve receipt event state",
+    "approved survives deadline",
+    "terminal prevents repeat",
+    "wrong chain rejected",
+    "wrong codehash rejected",
+    "deadline equality expiry",
+    "gas insufficiency rejected",
+    "fee changes need new approval",
+    "missing receipt UNKNOWN no automatic retry",
+    "durable unknown action lock",
+    "approve then same-block claim accepted",
+    "wrong event payee rejected",
+    "wrong event amount rejected",
+    "loopback 5042 explicitly local not mainnet",
+    "official RPC label remains Arc mainnet"
+  ],
+  "rpcReads": 35,
+  "explicitMockSends": 7
+}
