@@ -67,3 +67,7 @@ npm run recovery -- --contract YOUR_CONTRACT --codehash TRUSTED_RUNTIME_HASH --o
 The browser Recovery Kit accepts the user's ordinary EIP-1193 wallet. The CLI's optional signer uses only project-scoped files outside the repository, with mode 600, explicit mainnet enablement and a per-action cap. Its journal lock covers processes sharing the same journal. Do not run another signing stream from the same wallet under a different journal. A crashed or uncertain action stays blocked until its original transaction is reconciled; do not delete a lock or spend ledger and assume nothing was sent. This is crash protection for cooperative local processes, not protection against a hostile operating system.
 
 `prepare-action.ts` and `budget.ts` perform unsigned preflight. `provision-mainnet.ts` is a separately enabled fresh-key tool, never a test prerequisite. Creating wallets or signing does not constitute permission to spend: the mainnet deployment and task lifecycle require a concrete, separately approved funding budget. An unconfigured manifest means no deployment is claimed.
+
+## Mainnet demonstration
+
+[60-second mainnet engineering demo](https://agent3-666.github.io/purser-relay-arc-2026/assets/mainnet-engineering-demo.mp4) and [editable source](docs/assets/mainnet-demo-editable-source.zip) use the full frozen mainnet receipt evidence. The previous LOCAL film remains separately labeled. The mainnet trial uses controlled wallets, not production customers; content hashes and schema checks do not establish report quality.

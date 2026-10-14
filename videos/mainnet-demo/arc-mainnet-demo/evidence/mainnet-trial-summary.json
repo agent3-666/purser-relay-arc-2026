@@ -1,0 +1,134 @@
+{
+  "scope": "ARC_MAINNET_5042",
+  "controlledRoleTrial": true,
+  "productionCustomersClaimed": false,
+  "AIExecutionClaimed": false,
+  "contentQualityVerified": false,
+  "contract": "0x33323371EBE0125295892e5762F7B86bAE4F0E30",
+  "runtimeCodeHash": "0x0a85b62a4fe305fcb9da3d3f9ef40dafd93e96e572eb1ab7b534d71559a0cc23",
+  "paidClaim": {
+    "name": "arc-mainnet-20261014-independent-claim",
+    "txHash": "0xc27f78ecc4326f2c293d33d51587513a5bd6252061bea92fc49087e6927653a4",
+    "from": "0x789BefdDc5227CEb76b6caB8de9b81d45224C21F",
+    "to": "0x33323371EBE0125295892e5762F7B86bAE4F0E30",
+    "value18": "0",
+    "nonce": 0,
+    "status": 1,
+    "blockNumber": 25866737,
+    "blockHash": "0x183529c7c4b7e409e8ede3124a0e273bfdb15d316c6148c1ff7143c44b3210aa",
+    "gasUsed": "74300",
+    "effectiveGasPrice": "20000000000",
+    "actualFee18": "1486000000000000",
+    "logs": [
+      {
+        "address": "0xffffFFFfFFffffffffffffffFfFFFfffFFFfFFfE",
+        "topics": [
+          "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+          "0x00000000000000000000000033323371ebe0125295892e5762f7b86bae4f0e30",
+          "0x000000000000000000000000789befddc5227ceb76b6cab8de9b81d45224c21f"
+        ],
+        "data": "0x000000000000000000000000000000000000000000000000002386f26fc10000"
+      },
+      {
+        "address": "0x33323371EBE0125295892e5762F7B86bAE4F0E30",
+        "topics": [
+          "0x009aa28285e2f2f93f61312a2c375d49710858b14618190f383029b03c6ec3f4",
+          "0xbf42084656dc37e078781c4a128712dca0486afa7bd335d695aa8a6756f64f74",
+          "0x000000000000000000000000789befddc5227ceb76b6cab8de9b81d45224c21f"
+        ],
+        "data": "0x000000000000000000000000000000000000000000000000002386f26fc10000"
+      }
+    ],
+    "explorer": "https://explorer.arc.io/tx/0xc27f78ecc4326f2c293d33d51587513a5bd6252061bea92fc49087e6927653a4"
+  },
+  "refundClaim": {
+    "name": "arc-mainnet-20261014-independent-refund",
+    "txHash": "0x6a3da310eda16b9bee993777d71515c2cd3690d7ed253f4d25bf22162e4a8001",
+    "from": "0x007D2ed175055e5a6B979b8cA1f78fB17D9A086d",
+    "to": "0x33323371EBE0125295892e5762F7B86bAE4F0E30",
+    "value18": "0",
+    "nonce": 8,
+    "status": 1,
+    "blockNumber": 25867158,
+    "blockHash": "0x07cc6ff71def84eb2566984470a434bfd7c3483a1bff68c7a08187497745e0eb",
+    "gasUsed": "74324",
+    "effectiveGasPrice": "20000000000",
+    "actualFee18": "1486480000000000",
+    "logs": [
+      {
+        "address": "0xffffFFFfFFffffffffffffffFfFFFfffFFFfFFfE",
+        "topics": [
+          "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+          "0x00000000000000000000000033323371ebe0125295892e5762f7b86bae4f0e30",
+          "0x000000000000000000000000007d2ed175055e5a6b979b8ca1f78fb17d9a086d"
+        ],
+        "data": "0x000000000000000000000000000000000000000000000000002386f26fc10000"
+      },
+      {
+        "address": "0x33323371EBE0125295892e5762F7B86bAE4F0E30",
+        "topics": [
+          "0xe950d47bcc1a745a8ef1d8b86486b400a99681910425d126eb1a006d61f341b2",
+          "0xba8323cceb0dd36fd957e633ce5732845aa8e89df74125e05945a3071be7aa1c",
+          "0x000000000000000000000000007d2ed175055e5a6b979b8ca1f78fb17d9a086d"
+        ],
+        "data": "0x000000000000000000000000000000000000000000000000002386f26fc10000"
+      }
+    ],
+    "explorer": "https://explorer.arc.io/tx/0x6a3da310eda16b9bee993777d71515c2cd3690d7ed253f4d25bf22162e4a8001"
+  },
+  "orders": [
+    {
+      "kind": "paid",
+      "orderId": "0xbf42084656dc37e078781c4a128712dca0486afa7bd335d695aa8a6756f64f74",
+      "status": "Claimed",
+      "owner": "0x007D2ed175055e5a6B979b8cA1f78fB17D9A086d",
+      "payee": "0x789BefdDc5227CEb76b6caB8de9b81d45224C21F",
+      "workerA": "0xe5Bc2295a925BffC2AB947ADe20029Cc0a5927c3",
+      "workerB": "0xD1C187E8E7C0C219CA39890e32D4ab65dEc86392",
+      "epoch": "2",
+      "requestHash": "0x04e6e207e86235f4ad1bbafe78133e693b61e029b60607f4ff6dd058efc40461",
+      "acceptanceRuleHash": "0x8a4e922d60da95f7a344f68b2f4a1c178ecd9b0e05faac443f56c85b3cc782ee",
+      "deliverableHash": "0xe0e20332d3075d8e520f7473f36aef1fac037e598e4d271b73fb6ef26da6bc8c",
+      "principal18": "10000000000000000",
+      "deadline": "1791960006",
+      "credit18": "0"
+    },
+    {
+      "kind": "refund",
+      "orderId": "0xba8323cceb0dd36fd957e633ce5732845aa8e89df74125e05945a3071be7aa1c",
+      "status": "Refunded",
+      "owner": "0x007D2ed175055e5a6B979b8cA1f78fB17D9A086d",
+      "payee": "0x789BefdDc5227CEb76b6caB8de9b81d45224C21F",
+      "workerA": "0xA7155fD8aE810082AA56A81C88374ee197FEed4a",
+      "workerB": "0xD1C187E8E7C0C219CA39890e32D4ab65dEc86392",
+      "epoch": "1",
+      "requestHash": "0x04e6e207e86235f4ad1bbafe78133e693b61e029b60607f4ff6dd058efc40461",
+      "acceptanceRuleHash": "0x8a4e922d60da95f7a344f68b2f4a1c178ecd9b0e05faac443f56c85b3cc782ee",
+      "deliverableHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "principal18": "10000000000000000",
+      "deadline": "1791953021",
+      "credit18": "0"
+    }
+  ],
+  "finalLiabilities18": "0",
+  "finalContractBalance18": "0",
+  "independentRecoveryProcesses": true,
+  "mainAppBackendRequired": false,
+  "workerJournalRequired": false,
+  "localSolidityTests": 23,
+  "localMutantsKilled": 6,
+  "sourceHashes": {
+    "evidence/mainnet-verified.json": "4d00a125a3274af0a80abb416fc926362f6bbc2d9ef843f2ca5a6c0194b111f7",
+    "evidence/arc-contract-tests.txt": "4c1ffd586a27c0546633528e2643bcd282dfb657e447ba8a5966d81114c433a8",
+    "evidence/arc-contract-mutations.json": "5d9e46e7ff78186dc3dfc537bb2d795c6e66ee75d92463e674187b25a6386445",
+    "candidate/contracts/PurserRelayArc.sol": "9df469a9e71b4dd21acbef087954fd875c86c2642990b10c77215a0e6bd34936",
+    "candidate/package.json": "563269dda6b5d7c70f1314f3a03aaea9ec8848e7c9e25e35006ecd3bce0089b5",
+    "candidate/package-lock.json": "7d3221f0b539e45b5c9744e1d17258ac622de9f0acdbea9ccbf1389053712362",
+    "candidate/scripts/recovery.ts": "4a282798862291fca813c1b73c17d4495ca1e0e02572a6bdd5e097f456b34049",
+    "candidate/examples/request.json": "d5101a428eb5001cd7cdc86742d344d0f804092606efe911e50090dc8a2e9848",
+    "candidate/examples/acceptance-rule.json": "0990e330a2775fb426c06195b7ee47487081334240ee765ff2aed279536c6399",
+    "candidate/examples/report.json": "1cc21b9f5a4854f366cdbb5750fea2f6f0b6dbefb4abd4c67b7aac7f8ea60409"
+  },
+  "frozenReceipt": "evidence/mainnet-trial-frozen.json",
+  "frozenReceiptSha256": "4d00a125a3274af0a80abb416fc926362f6bbc2d9ef843f2ca5a6c0194b111f7"
+}

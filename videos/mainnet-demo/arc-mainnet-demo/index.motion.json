@@ -1,0 +1,41 @@
+{
+  "duration": 60,
+  "assertions": [
+    {
+      "kind": "appearsBy",
+      "selector": "#arc-roles-title",
+      "bySec": 1
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#arc-roles-title"
+    },
+    {
+      "kind": "appearsBy",
+      "selector": "#arc-recovery-title",
+      "bySec": 16
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#arc-recovery-title"
+    },
+    {
+      "kind": "appearsBy",
+      "selector": "#arc-tests-title",
+      "bySec": 31
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#arc-tests-title"
+    },
+    {
+      "kind": "appearsBy",
+      "selector": "#arc-limits-title",
+      "bySec": 46
+    },
+    {
+      "kind": "staysInFrame",
+      "selector": "#arc-limits-title"
+    }
+  ]
+}
