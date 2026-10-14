@@ -4,7 +4,7 @@ Task owners need to replace an unavailable AI worker without moving the task's p
 
 Purser Relay uses native USDC on Arc to escrow a fixed task payment. The owner can rotate workers before delivery, approve one submitted artifact, and grant an irrevocable payment credit to the original payee. The payee then withdraws independently. An unapproved task can expire and return its principal to its owner.
 
-**Current release status: local implementation in progress. No Arc mainnet deployment or working mainnet lifecycle is claimed.** The deployment manifest will identify a verified contract and evidence when available. This build is not a grant submission until its mainnet requirements are satisfied.
+**Current release status: deployed and verified on Arc mainnet (5042).** Contract [`0x33323371EBE0125295892e5762F7B86bAE4F0E30`](https://explorer.arc.io/address/0x33323371EBE0125295892e5762F7B86bAE4F0E30) uses the unchanged locally accepted runtime. [Mainnet evidence](evidence/mainnet-verified.json) records eleven successful transactions: deployment, two gas-role allocations, a paid worker handoff with independent payee claim, and an expired task with independent owner refund. Each task principal is 0.01 USDC. The controlled-role trial ends with zero credits, liabilities and contract balance. Mainnet verification is separate from formal submission and award status.
 
 ## Roles and lifecycle
 
